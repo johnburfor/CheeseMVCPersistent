@@ -39,6 +39,5 @@ namespace CheeseMVC.ViewModels
         public AddCheeseViewModel()
         {
         }
-    
     }
 }

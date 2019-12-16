@@ -1,4 +1,4 @@
-﻿using CheeseMVC.Data;
+using CheeseMVC.Data;
 using CheeseMVC.Models;
 using CheeseMVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -17,14 +17,15 @@ namespace CheeseMVC.Controllers
         {
             context = dbContext;
         }
+
         public IActionResult Index()
         {
-            List<CheeseCategory> categories = context.Categories.ToList();
+            List<CheeseCategory> cheeseCategories = context.Categories.ToList();
 
-            return View(categories);
+            return View(cheeseCategories);
         }
 
-         [HttpGet]
+        [HttpGet]
         public IActionResult Add()
         {
             AddCategoryViewModel addCategoryViewModel = new AddCategoryViewModel();
@@ -50,6 +51,5 @@ namespace CheeseMVC.Controllers
 
             return View(addCategoryViewModel);
         }
-
     }
 }

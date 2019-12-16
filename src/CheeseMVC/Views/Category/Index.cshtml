@@ -3,7 +3,7 @@
     ViewData["Title"] = "Index";
 }
 
-    <h2>Cheese Categories</h2>
+<h2>Cheese Categories</h2>
 
 @model List<CheeseMVC.Models.CheeseCategory>
 <ul>
@@ -12,5 +12,4 @@
         <li><a>@cheeseCategory.Name</a></li>
     }
 </ul>
-
 <p><a asp-controller="Category" asp-action="Add">Add Category</a></p>
